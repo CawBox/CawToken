@@ -23,9 +23,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031E2AA81F47B14700E86FE3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		OBJ_11 /* CawTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CawTokenTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CawToken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CawToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_14 /* CawTokenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CawTokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_14 /* CawTokenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CawTokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* CawToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CawToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,15 +68,15 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				031E2AA81F47B14700E86FE3 /* .swiftlint.yml */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
 				OBJ_12 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -101,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_16 /* Build configuration list for PBXNativeTarget "CawToken" */;
 			buildPhases = (
+				031E2AA71F47B0E900E86FE3 /* SwiftLint */,
 				OBJ_19 /* Sources */,
 				OBJ_21 /* Frameworks */,
 			);
@@ -137,6 +139,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					OBJ_15 = {
+						LastSwiftMigration = 0900;
+					};
+					OBJ_22 = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CawToken" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -145,7 +155,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +165,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		031E2AA71F47B0E900E86FE3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_19 /* Sources */ = {
@@ -201,6 +228,8 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = CawToken;
 			};
 			name = Debug;
@@ -222,6 +251,8 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = CawToken;
 			};
 			name = Release;
@@ -239,6 +270,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = CawTokenTests;
 			};
 			name = Debug;
@@ -256,6 +289,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = CawTokenTests;
 			};
 			name = Release;
